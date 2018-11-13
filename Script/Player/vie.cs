@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class vie : MonoBehaviour {
 
-	public int vie_tt;
-	public int LifePoint;
+	public float vie_tt;
+	public float LifePoint;
 	public Image bar;
 
 	void Start () {
@@ -14,6 +14,6 @@ public class vie : MonoBehaviour {
 	
 
 	void Update () {
-		print(bar.rectTransform.rect);
+		bar.rectTransform.localScale = new Vector3(LifePoint / vie_tt, 1.0f, 1.0f);
 	}
 }
