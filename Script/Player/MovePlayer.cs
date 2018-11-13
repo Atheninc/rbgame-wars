@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class MovePlayer : MonoBehaviour {
+public class MovePlayer : NetworkBehaviour{
 
 	public float speed;
 	public float SautForce;
@@ -16,6 +17,8 @@ public class MovePlayer : MonoBehaviour {
 	
 
 	void Update () {
+		if (!isLocalPlayer)
+			return;
 		t = Time.deltaTime;
 		X = Input.GetAxis("Horizontal");
 		rb.transform.Translate(transform.right * speed * t * X);

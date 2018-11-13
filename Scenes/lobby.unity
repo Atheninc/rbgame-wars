@@ -190,6 +190,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &948985771
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377975858941144, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652200036638096, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+        type: 2}
+      propertyPath: m_SyncSpin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608011725623674, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+        type: 2}
+      propertyPath: gunParam.ball
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608011725623674, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+        type: 2}
+      propertyPath: ammoParam.degat
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608011725623674, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+        type: 2}
+      propertyPath: ammoParam.speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608011725623674, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+        type: 2}
+      propertyPath: ammoParam.gravity_Force
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608011725623674, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+        type: 2}
+      propertyPath: pref
+      value: 
+      objectReference: {fileID: 1095161131165644, guid: e67f14fa45050c54eadff85c21e008cb,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &948985772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1864841960908914, guid: aedeb9bd6acfc4447a8ebf4e4df5d7e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 948985771}
+--- !u!114 &948985773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948985772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 174
+    i1: 222
+    i2: 185
+    i3: 189
+    i4: 106
+    i5: 207
+    i6: 196
+    i7: 68
+    i8: 122
+    i9: 142
+    i10: 191
+    i11: 78
+    i12: 77
+    i13: 245
+    i14: 215
+    i15: 233
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &1369326530
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +358,8 @@ MonoBehaviour:
   m_PlayerSpawnMethod: 0
   m_OfflineScene: lobby
   m_OnlineScene: SampleScene
-  m_SpawnPrefabs: []
+  m_SpawnPrefabs:
+  - {fileID: 0}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
