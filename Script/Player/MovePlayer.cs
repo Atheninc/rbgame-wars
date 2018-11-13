@@ -28,9 +28,9 @@ public class MovePlayer : NetworkBehaviour{
 		else
 			anim.Play("idle");
 		if (X < 0.0f)
-			transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+			GetComponent<SpriteRenderer>().flipX = false;
 		else
-			transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+			GetComponent<SpriteRenderer>().flipX = true;
 		rb.transform.Translate(transform.right * speed * t * X);
 		if (Input.GetButtonDown("Fire1") && isGround)
 			rb.AddForce(Vector2.up * SautForce, ForceMode2D.Impulse);
