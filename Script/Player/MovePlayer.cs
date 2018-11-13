@@ -12,6 +12,7 @@ public class MovePlayer : NetworkBehaviour{
 	private float t;
 	public Rigidbody2D rb;
 	private bool isGround;
+	public Animator anim;
 	void Start () {
 	}
 	
@@ -21,6 +22,15 @@ public class MovePlayer : NetworkBehaviour{
 			return;
 		t = Time.deltaTime;
 		X = Input.GetAxis("Horizontal");
+		if (Mathf.Abs(X) > 0.2f){
+			anim.Play("walk_right");
+		}
+		else
+			anim.Play("idle");
+		if (X < 0.0f)
+			transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+		else
+			transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 		rb.transform.Translate(transform.right * speed * t * X);
 		if (Input.GetButtonDown("Fire1") && isGround)
 			rb.AddForce(Vector2.up * SautForce, ForceMode2D.Impulse);
