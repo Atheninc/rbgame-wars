@@ -13,6 +13,7 @@ public class MovePlayer : NetworkBehaviour{
 	public Rigidbody2D rb;
 	private bool isGround;
 	public Animator anim;
+	public GameObject gun;
 	void Start () {
 	}
 	
@@ -28,9 +29,15 @@ public class MovePlayer : NetworkBehaviour{
 		else
 			anim.Play("idle");
 		if (X < 0.0f)
+		{
 			GetComponent<SpriteRenderer>().flipX = false;
+			gun.GetComponent<SpriteRenderer>().flipY = true;
+		}	
 		else
+		{
 			GetComponent<SpriteRenderer>().flipX = true;
+			gun.GetComponent<SpriteRenderer>().flipY = false;
+		}
 		rb.transform.Translate(transform.right * speed * t * X);
 		if (Input.GetButtonDown("Fire1") && isGround)
 			rb.AddForce(Vector2.up * SautForce, ForceMode2D.Impulse);
